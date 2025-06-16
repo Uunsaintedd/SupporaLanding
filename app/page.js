@@ -24,7 +24,7 @@ export default function LandingPage() {
       <p className="text-lg mb-6">Remote-first L1 & L2 support for startups, SaaS & fintech companies</p>
       <a
         href="#contact"
-        className="inline-block bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 transition"
+        className="inline-block bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 hover:-translate-y-1 transition transform"
       >
         Let’s Talk
       </a>
@@ -64,7 +64,10 @@ export default function LandingPage() {
               { icon: Database, label: "CRM & Helpdesk Integrations" },
               { icon: HelpCircle, label: "In-App Support Widget Integration" }
             ].map((item, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center">
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition transform"
+              >
                 <item.icon className="w-8 h-8 mb-4 text-purple-600" />
                 <p>{item.label}</p>
               </div>
@@ -90,7 +93,10 @@ export default function LandingPage() {
           key={idx}
           className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm"
         >*/
-          <div key={idx} className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm">
+          <div
+            key={idx}
+            className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm hover:shadow-lg hover:-translate-y-1 transition transform"
+          >
 
           <p>{item}</p>
         </div>
@@ -98,6 +104,94 @@ export default function LandingPage() {
     </div>
   </div>
 </section>
+
+      {/* How It Works */}
+      <section className="py-20 text-center bg-gray-100">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-10">How It Works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              { step: "1", desc: "Intro call (30 min)" },
+              { step: "2", desc: "Access setup (Helpdesk / CRM)" },
+              { step: "3", desc: "Agent training (1–2 days)" },
+              { step: "4", desc: "Go live + monitoring (24/7)" },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:-translate-y-1 transition transform"
+              >
+                <p className="text-4xl font-bold mb-2">{item.step}</p>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-white text-center">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <h2 className="text-3xl font-bold mb-10">What Our Clients Say</h2>
+          <div className="space-y-8">
+            {[
+              {
+                quote: "They helped us scale support from day 1.",
+                name: "John, SaaS Founder",
+              },
+              {
+                quote: "SUPPORA feels like our in-house team.",
+                name: "Stealth Client",
+              },
+            ].map((t, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:-translate-y-1 transition transform"
+              >
+                <p className="italic mb-2">“{t.quote}”</p>
+                <p className="font-semibold">{t.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="py-20 bg-purple-600 text-white text-center">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-10">Our Team</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Dmytro",
+                role: "Support Lead",
+                img: "https://via.placeholder.com/150",
+              },
+              {
+                name: "Olena",
+                role: "Support Engineer",
+                img: "https://via.placeholder.com/150",
+              },
+              {
+                name: "Yurii",
+                role: "Account Manager",
+                img: "https://via.placeholder.com/150",
+              },
+            ].map((person, idx) => (
+              <div key={idx} className="flex flex-col items-center">
+                <img
+                  src={person.img}
+                  alt={person.name}
+                  className="w-32 h-32 rounded-full mb-4"
+                />
+                <p className="font-semibold">{person.name}</p>
+                <p className="text-sm text-gray-200">{person.role}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 text-gray-200">Ukraine based team. Global mindset.</p>
+        </div>
+      </section>
+
 
 
       {/* Plans */}
@@ -134,7 +228,7 @@ export default function LandingPage() {
             ].map((plan, idx) => (
               <div
                 key={idx}
-                className={`p-6 rounded-xl shadow text-left border ${plan.highlight ? "border-purple-500 bg-purple-50" : "bg-white"}`}
+                className={`p-6 rounded-xl shadow text-left border ${plan.highlight ? "border-purple-500 bg-purple-50" : "bg-white"} hover:shadow-lg hover:-translate-y-1 transition transform`}
               >
                 <h3 className="text-2xl font-bold mb-3">{plan.name}</h3>
                 <p><strong>Coverage:</strong> {plan.coverage}</p>
@@ -142,7 +236,7 @@ export default function LandingPage() {
                 <p><strong>Channels:</strong> {plan.channels}</p>
                 <p><strong>Level:</strong> {plan.level}</p>
                 <p className="text-xl font-semibold mt-2">{plan.price}</p>
-                <button className="mt-4 w-full bg-purple-600 text-white py-2 rounded-xl hover:bg-purple-700 transition">
+                <button className="mt-4 w-full bg-purple-600 text-white py-2 rounded-xl hover:bg-purple-700 hover:-translate-y-1 transition transform">
                   Start Now
                 </button>
               </div>
