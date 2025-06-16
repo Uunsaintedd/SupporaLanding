@@ -64,7 +64,10 @@ export default function LandingPage() {
               { icon: Database, label: "CRM & Helpdesk Integrations" },
               { icon: HelpCircle, label: "In-App Support Widget Integration" }
             ].map((item, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center">
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition transform"
+              >
                 <item.icon className="w-8 h-8 mb-4 text-purple-600" />
                 <p>{item.label}</p>
               </div>
@@ -90,7 +93,10 @@ export default function LandingPage() {
           key={idx}
           className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm"
         >*/
-          <div key={idx} className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm">
+          <div
+            key={idx}
+            className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm hover:shadow-lg hover:-translate-y-1 transition transform"
+          >
 
           <p>{item}</p>
         </div>
@@ -100,7 +106,7 @@ export default function LandingPage() {
 </section>
 
       {/* How It Works */}
-      <section className="py-20 text-center">
+      <section className="py-20 text-center bg-gray-100">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-10">How It Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -112,7 +118,7 @@ export default function LandingPage() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg hover:-translate-y-1 transition transform"
+                className="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:-translate-y-1 transition transform"
               >
                 <p className="text-4xl font-bold mb-2">{item.step}</p>
                 <p>{item.desc}</p>
@@ -123,7 +129,7 @@ export default function LandingPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50 text-center">
+      <section className="py-20 bg-white text-center">
         <div className="container mx-auto px-6 max-w-3xl">
           <h2 className="text-3xl font-bold mb-10">What Our Clients Say</h2>
           <div className="space-y-8">
@@ -150,7 +156,7 @@ export default function LandingPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 text-center">
+      <section className="py-20 bg-purple-600 text-white text-center">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-10">Our Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -178,11 +184,11 @@ export default function LandingPage() {
                   className="w-32 h-32 rounded-full mb-4"
                 />
                 <p className="font-semibold">{person.name}</p>
-                <p className="text-sm text-gray-600">{person.role}</p>
+                <p className="text-sm text-gray-200">{person.role}</p>
               </div>
             ))}
           </div>
-          <p className="mt-8 text-gray-500">Ukraine based team. Global mindset.</p>
+          <p className="mt-8 text-gray-200">Ukraine based team. Global mindset.</p>
         </div>
       </section>
 
@@ -222,7 +228,7 @@ export default function LandingPage() {
             ].map((plan, idx) => (
               <div
                 key={idx}
-                className={`p-6 rounded-xl shadow text-left border ${plan.highlight ? "border-purple-500 bg-purple-50" : "bg-white"}`}
+                className={`p-6 rounded-xl shadow text-left border ${plan.highlight ? "border-purple-500 bg-purple-50" : "bg-white"} hover:shadow-lg hover:-translate-y-1 transition transform`}
               >
                 <h3 className="text-2xl font-bold mb-3">{plan.name}</h3>
                 <p><strong>Coverage:</strong> {plan.coverage}</p>
