@@ -43,7 +43,7 @@ export default function LandingPage() {
   <div className="container mx-auto px-6 max-w-3xl">
     <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
     <p className="text-lg leading-relaxed">
-      SUPPORA is a modern remote-first support agency delivering L1 and L2 technical support.
+      Suppora is a modern remote-first support agency delivering L1 and L2 technical support.
       We combine tech expertise with a human-first attitude to help your users feel heard,
       understood, and supported — 24/7.
     </p>
@@ -79,7 +79,7 @@ export default function LandingPage() {
       {/* Why Suppora */}
       <section className="py-20 bg-purple-600 text-white text-center">
   <div className="container mx-auto px-6">
-    <h2 className="text-3xl font-bold mb-10">Why SUPPORA?</h2>
+    <h2 className="text-3xl font-bold mb-10">Why Suppora?</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
       {[
         "Bilingual & Multilingual Agents (EN, UA, RU, ES*)",
@@ -139,7 +139,7 @@ export default function LandingPage() {
                 name: "John, SaaS Founder",
               },
               {
-                quote: "SUPPORA feels like our in-house team.",
+                quote: "Suppora feels like our in-house team.",
                 name: "Stealth Client",
               },
             ].map((t, idx) => (
