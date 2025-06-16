@@ -24,7 +24,7 @@ export default function LandingPage() {
       <p className="text-lg mb-6">Remote-first L1 & L2 support for startups, SaaS & fintech companies</p>
       <a
         href="#contact"
-        className="inline-block bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 transition"
+        className="inline-block bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 transition-transform hover:scale-105"
       >
         Let’s Talk
       </a>
@@ -49,6 +49,28 @@ export default function LandingPage() {
     </p>
   </div>
 </section>
+
+      {/* Team */}
+      <section className="py-20 bg-white text-center">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-10">Our Team</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {[
+              { name: "Dmytro", role: "Support Lead" },
+              { name: "Olena", role: "Support Agent" },
+              { name: "Ivan", role: "Tech Specialist" }
+            ].map((member, idx) => (
+              <div key={idx} className="flex flex-col items-center">
+                <img src="/logo.png" alt={member.name} className="w-24 h-24 rounded-full mb-4" />
+                <p className="font-semibold">{member.name}</p>
+                <p className="text-sm text-gray-600">{member.role}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm mt-8">Ukraine based team. Global mindset.</p>
+        </div>
+      </section>
+
 
 
       {/* What We Do */}
@@ -99,6 +121,27 @@ export default function LandingPage() {
   </div>
 </section>
 
+      {/* How It Works */}
+      <section className="py-20 bg-gray-100 text-center">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-10">How It Works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {[
+              "Intro call (30 min)",
+              "Access setup (Helpdesk / CRM)",
+              "Agent training (1–2 days)",
+              "Go live + monitoring (24/7)"
+            ].map((desc, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-xl shadow">
+                <p className="text-2xl font-bold mb-2">Step {idx + 1}</p>
+                <p>{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
 
       {/* Plans */}
       <section className="py-20 bg-gray-50 text-center">
@@ -142,7 +185,7 @@ export default function LandingPage() {
                 <p><strong>Channels:</strong> {plan.channels}</p>
                 <p><strong>Level:</strong> {plan.level}</p>
                 <p className="text-xl font-semibold mt-2">{plan.price}</p>
-                <button className="mt-4 w-full bg-purple-600 text-white py-2 rounded-xl hover:bg-purple-700 transition">
+                <button className="mt-4 w-full bg-purple-600 text-white py-2 rounded-xl hover:bg-purple-700 transition-transform hover:scale-105">
                   Start Now
                 </button>
               </div>
@@ -151,13 +194,38 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* What Our Clients Say */}
+      <section className="py-20 bg-purple-600 text-white text-center">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-10">What Our Clients Say</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {[
+              { quote: "They helped us scale support from day 1.", name: "John", title: "SaaS Founder" },
+              { quote: "SUPPORA feels like our in-house team.", name: "Stealth Client", title: "CTO, Fintech EU" }
+            ].map((t, idx) => (
+              <div key={idx} className="bg-white/10 p-6 rounded-xl">
+                <p className="italic mb-4">\"{t.quote}\"</p>
+                <div className="flex items-center">
+                  <img src="/logo.png" alt={t.name} className="w-10 h-10 rounded-full mr-3 bg-white" />
+                  <div className="text-left">
+                    <p className="font-semibold">{t.name}</p>
+                    <p className="text-sm opacity-75">{t.title}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* Contact */}
       <section id="contact" className="py-20 bg-purple-600 text-white text-center">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-6">Let’s Talk</h2>
-          <p>Email: <a href="mailto:contact@suppora.com" className="underline">contact@suppora.com</a></p>
-          <p className="mt-2">LinkedIn: <a href="https://linkedin.com/company/suppora" className="underline">linkedin.com/company/suppora</a></p>
-          <p className="mt-6">Or <a href="#" className="underline">fill out our contact form</a></p>
+          <p>Email: <a href="mailto:contact@suppora.com" className="underline transition-transform hover:scale-105">contact@suppora.com</a></p>
+          <p className="mt-2">LinkedIn: <a href="https://linkedin.com/company/suppora" className="underline transition-transform hover:scale-105">linkedin.com/company/suppora</a></p>
+          <p className="mt-6">Or <a href="#" className="underline transition-transform hover:scale-105">fill out our contact form</a></p>
         </div>
       </section>
     </main>
