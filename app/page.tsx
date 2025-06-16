@@ -155,18 +155,15 @@ export default function LandingPage() {
       <section id="contact" className="py-20 bg-purple-600 text-white text-center">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-6">Let’s Talk</h2>
-          <div className="mx-auto" style={{ maxWidth: 600 }}>
-            {/* Embed Tally form */}
-            <iframe
-              title="Contact Form"
-              src="https://tally.so/embed/YOUR_TALLY_FORM_ID?backgroundColor=white&hideTitle=1&alignLeft=1"
-              width="100%"
-              height="600"
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-            ></iframe>
-          </div>
+          <p>
+            Email: <a href="mailto:contact@suppora.com" className="underline">contact@suppora.com</a>
+          </p>
+          <p className="mt-2">
+            LinkedIn: <a href="https://linkedin.com/company/suppora" className="underline">linkedin.com/company/suppora</a>
+          </p>
+          <p className="mt-6">
+            Or <a href="#" className="underline">fill out our contact form</a>
+          </p>
         </div>
       </section>
     </main>
