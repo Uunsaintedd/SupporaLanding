@@ -99,6 +99,82 @@ export default function LandingPage() {
   </div>
 </section>
 
+      {/* How It Works */}
+      <section className="py-20 text-center">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-10">How It Works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              { step: "1", desc: "Intro call (30 min)" },
+              { step: "2", desc: "Access setup (Helpdesk / CRM)" },
+              { step: "3", desc: "Agent training (1–2 days)" },
+              { step: "4", desc: "Go live + monitoring (24/7)" }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-xl shadow">
+                <div className="text-4xl font-bold text-purple-600 mb-2">{item.step}</div>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-gray-50 text-center">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-10">What Our Clients Say</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "John",
+                title: "SaaS Founder",
+                text: "They helped us scale support from day 1.",
+                avatar: "https://placehold.co/80x80"
+              },
+              {
+                name: "Stealth Client",
+                title: "CTO, Fintech EU",
+                text: "SUPPORA feels like our in-house team.",
+                avatar: "https://placehold.co/80x80"
+              },
+              {
+                name: "Maria",
+                title: "Product Lead",
+                text: "Reliable 24/7 coverage from a friendly team.",
+                avatar: "https://placehold.co/80x80"
+              }
+            ].map((t, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-xl shadow">
+                <img src={t.avatar} alt={t.name} className="w-16 h-16 rounded-full mx-auto mb-4" />
+                <p className="italic mb-2">“{t.text}”</p>
+                <p className="font-semibold">{t.name}</p>
+                <p className="text-sm text-gray-500">{t.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="py-20 text-center">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-10">Our Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { name: "Dmytro", role: "Support Lead", photo: "https://placehold.co/120x120" },
+              { name: "Oksana", role: "Customer Success", photo: "https://placehold.co/120x120" },
+              { name: "Ivan", role: "Tech Support", photo: "https://placehold.co/120x120" }
+            ].map((member, idx) => (
+              <div key={idx} className="flex flex-col items-center">
+                <img src={member.photo} alt={member.name} className="w-24 h-24 rounded-full mb-4" />
+                <p className="font-semibold">{member.name}</p>
+                <p className="text-sm text-gray-500">{member.role}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-gray-600">Ukraine based team. Global mindset.</p>
+        </div>
+      </section>
 
       {/* Plans */}
       <section className="py-20 bg-gray-50 text-center">
