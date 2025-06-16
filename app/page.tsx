@@ -24,7 +24,7 @@ export default function LandingPage() {
       <p className="text-lg mb-6">Remote-first L1 & L2 support for startups, SaaS & fintech companies</p>
       <a
         href="#contact"
-        className="inline-block bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 transition"
+        className="inline-block bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 transition transform hover:scale-105 duration-300"
       >
         Let’s Talk
       </a>
@@ -64,7 +64,7 @@ export default function LandingPage() {
               { icon: Database, label: "CRM & Helpdesk Integrations" },
               { icon: HelpCircle, label: "In-App Support Widget Integration" }
             ].map((item, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center">
+              <div key={idx} className="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center transition transform hover:-translate-y-2 hover:shadow-lg duration-300">
                 <item.icon className="w-8 h-8 mb-4 text-purple-600" />
                 <p>{item.label}</p>
               </div>
@@ -90,7 +90,7 @@ export default function LandingPage() {
           key={idx}
           className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm"
         >*/
-          <div key={idx} className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm">
+          <div key={idx} className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm transition transform hover:-translate-y-2 hover:shadow-lg duration-300">
 
           <p>{item}</p>
         </div>
@@ -134,7 +134,7 @@ export default function LandingPage() {
             ].map((plan, idx) => (
               <div
                 key={idx}
-                className={`p-6 rounded-xl shadow text-left border ${plan.highlight ? "border-purple-500 bg-purple-50" : "bg-white"}`}
+                className={`p-6 rounded-xl shadow text-left border ${plan.highlight ? "border-purple-500 bg-purple-50" : "bg-white"} hover:shadow-lg transform hover:-translate-y-2 transition duration-300`}
               >
                 <h3 className="text-2xl font-bold mb-3">{plan.name}</h3>
                 <p><strong>Coverage:</strong> {plan.coverage}</p>
@@ -155,9 +155,18 @@ export default function LandingPage() {
       <section id="contact" className="py-20 bg-purple-600 text-white text-center">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-6">Let’s Talk</h2>
-          <p>Email: <a href="mailto:contact@suppora.com" className="underline">contact@suppora.com</a></p>
-          <p className="mt-2">LinkedIn: <a href="https://linkedin.com/company/suppora" className="underline">linkedin.com/company/suppora</a></p>
-          <p className="mt-6">Or <a href="#" className="underline">fill out our contact form</a></p>
+          <div className="mx-auto" style={{ maxWidth: 600 }}>
+            {/* Embed Tally form */}
+            <iframe
+              title="Contact Form"
+              src="https://tally.so/embed/YOUR_TALLY_FORM_ID?backgroundColor=white&hideTitle=1&alignLeft=1"
+              width="100%"
+              height="600"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+            ></iframe>
+          </div>
         </div>
       </section>
     </main>
