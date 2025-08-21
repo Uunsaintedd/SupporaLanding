@@ -57,15 +57,19 @@ export default function LandingPage() {
           <h2 className="text-3xl font-bold mb-10">What We Do</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: MessageCircle, label: "Level 1 & 2 Technical Support" },
-              { icon: Activity, label: "24/7 Global Coverage" },
-              { icon: PhoneCall, label: "Multichannel Support (Email, Chat, Calls)" },
-              { icon: MonitorSmartphone, label: "Monitoring & Alert Response" },
-              { icon: Database, label: "CRM & Helpdesk Integrations" },
-              { icon: HelpCircle, label: "In-App Support Widget Integration" }
+            { icon: MessageCircle, label: "Level 1 & 2 Technical Support" },
+            { icon: Activity, label: "24/7 Global Coverage" },
+            { icon: PhoneCall, label: "Multichannel Support (Email, Chat, Calls)" },
+            { icon: MonitorSmartphone, label: "Monitoring & Alert Response" },
+            { icon: Database, label: "CRM & Helpdesk Integrations" },
+            { icon: ShieldCheck, label: "Custom SLA & Reporting" },
+            { icon: HelpCircle, label: "In-App Support Widget Integration" }
             ].map((item, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center">
-                <item.icon className="w-8 h-8 mb-4 text-purple-600" />
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center hover:scale-105 hover:shadow-lg transition duration-300"
+              >
+                <item.icon className="w-10 h-10 mb-4 text-purple-600" />
                 <p>{item.label}</p>
               </div>
             ))}
@@ -84,14 +88,13 @@ export default function LandingPage() {
         "Startup-Speed Onboarding (3–5 days)",
         "Tech-Savvy (API, logs, SQL)",
         "Flexible & Secure (GDPR-ready, VPN access, reports)",
-        "Human-Centered Culture — Friendly, Empathetic, Real"
+        "Human-Centered Culture — Friendly, Empathetic, Real",
+        "Fully remote Ukrainian team – fast, loyal, flexible"
       ].map((item, idx) => (
-        /*<div
-          key={idx}
-          className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm"
-        >*/
-          <div key={idx} className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm">
-
+          <div
+            key={idx}
+            className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm hover:scale-105 hover:shadow-lg transition duration-300"
+          >
           <p>{item}</p>
         </div>
       ))}
