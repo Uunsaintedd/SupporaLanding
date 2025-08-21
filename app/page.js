@@ -5,32 +5,28 @@ export default function LandingPage() {
   return (
     <main className="bg-white text-gray-900 font-sans">
       {/* Hero Section */}
-      <section className="relative text-white pt-[180px] pb-[120px] text-center">
-  {/* Разделённый фон */}
-  <div className="absolute inset-0">
-    <div className="h-[35%] bg-white" />
-    <div className="h-[65%] bg-purple-600" />
-  </div>
+      <section className="relative min-h-screen flex items-center justify-center text-white text-center">
+        {/* Разделённый фон */}
+        <div className="absolute inset-0">
+          <div className="h-[35%] bg-white" />
+          <div className="h-[65%] bg-purple-600" />
+        </div>
 
-  <div className="relative container mx-auto px-6 flex flex-col items-center">
-    {/* ЛОГОТИП */}
-    <div className="-mt-[180px] mb-6">
-      <img src="/logo.png" alt="Suppora Logo" className="w-[180px] h-[180px]" />
-    </div>
+        <div className="relative container mx-auto px-6 md:px-8 flex flex-col items-center max-w-lg w-full">
+          {/* ЛОГОТИП */}
+          <img src="/logo.png" alt="Suppora Logo" className="w-[180px] h-[180px] mb-6" />
 
-    {/* ТЕКСТ */}
-    <div className="mt-10">
-      <h1 className="text-5xl font-bold mb-4">Scalable Human-Centered Tech Support</h1>
-      <p className="text-lg mb-6">Remote-first L1 & L2 support for startups, SaaS & fintech companies</p>
-      <a
-        href="#contact"
-        className="inline-block bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 transition"
-      >
-        Let’s Talk
-      </a>
-    </div>
-  </div>
-</section>
+          {/* ТЕКСТ */}
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Scalable Human-Centered Tech Support</h1>
+          <p className="text-base md:text-lg mb-6">Remote-first L1 & L2 support for startups, SaaS & fintech companies</p>
+          <a
+            href="#contact"
+            className="inline-block bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 transition w-full sm:w-auto"
+          >
+            Let’s Talk
+          </a>
+        </div>
+      </section>
 
 
 
@@ -40,9 +36,9 @@ export default function LandingPage() {
 
       {/* Who We Are */}
       <section className="py-20 bg-gray-50 text-center">
-  <div className="container mx-auto px-6 max-w-3xl">
-    <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
-    <p className="text-lg leading-relaxed">
+  <div className="container mx-auto px-6 md:px-8 max-w-3xl">
+    <h2 className="text-2xl md:text-3xl font-bold mb-6">Who We Are</h2>
+    <p className="text-base md:text-lg leading-relaxed">
       SUPPORA is a modern remote-first support agency delivering L1 and L2 technical support.
       We combine tech expertise with a human-first attitude to help your users feel heard,
       understood, and supported — 24/7.
@@ -53,8 +49,8 @@ export default function LandingPage() {
 
       {/* What We Do */}
       <section className="py-20 text-center">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-10">What We Do</h2>
+        <div className="container mx-auto px-6 md:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-10">What We Do</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { icon: MessageCircle, label: "Level 1 & 2 Technical Support" },
@@ -75,8 +71,8 @@ export default function LandingPage() {
 
       {/* Why Suppora */}
       <section className="py-20 bg-purple-600 text-white text-center">
-  <div className="container mx-auto px-6">
-    <h2 className="text-3xl font-bold mb-10">Why SUPPORA?</h2>
+  <div className="container mx-auto px-6 md:px-8">
+    <h2 className="text-2xl md:text-3xl font-bold mb-10">Why SUPPORA?</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
       {[
         "Bilingual & Multilingual Agents (EN, UA, RU, ES*)",
@@ -102,8 +98,8 @@ export default function LandingPage() {
 
       {/* Plans */}
       <section className="py-20 bg-gray-50 text-center">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-10">Choose Your Support Plan</h2>
+        <div className="container mx-auto px-6 md:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-10">Choose Your Support Plan</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -136,7 +132,7 @@ export default function LandingPage() {
                 key={idx}
                 className={`p-6 rounded-xl shadow text-left border ${plan.highlight ? "border-purple-500 bg-purple-50" : "bg-white"}`}
               >
-                <h3 className="text-2xl font-bold mb-3">{plan.name}</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-3">{plan.name}</h3>
                 <p><strong>Coverage:</strong> {plan.coverage}</p>
                 <p><strong>Agents:</strong> {plan.agents}</p>
                 <p><strong>Channels:</strong> {plan.channels}</p>
@@ -153,8 +149,8 @@ export default function LandingPage() {
 
       {/* Contact */}
       <section id="contact" className="py-20 bg-purple-600 text-white text-center">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-6">Let’s Talk</h2>
+        <div className="container mx-auto px-6 md:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">Let’s Talk</h2>
           <p>Email: <a href="mailto:contact@suppora.com" className="underline">contact@suppora.com</a></p>
           <p className="mt-2">LinkedIn: <a href="https://linkedin.com/company/suppora" className="underline">linkedin.com/company/suppora</a></p>
           <p className="mt-6">Or <a href="#" className="underline">fill out our contact form</a></p>
