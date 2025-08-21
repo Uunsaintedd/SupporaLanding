@@ -1,5 +1,5 @@
 import React from "react";
-import { MessageCircle, Activity, PhoneCall, MonitorSmartphone, Database, ShieldCheck, HelpCircle } from "lucide-react";
+import { MessageCircle, Activity, PhoneCall, MonitorSmartphone, Database, HelpCircle } from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -24,7 +24,7 @@ export default function LandingPage() {
       <p className="text-lg mb-6">Remote-first L1 & L2 support for startups, SaaS & fintech companies</p>
       <a
         href="#contact"
-        className="inline-block bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 transition"
+        className="inline-block bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 hover:scale-105 hover:shadow-lg transition duration-300"
       >
         Let’s Talk
       </a>
@@ -64,7 +64,7 @@ export default function LandingPage() {
               { icon: Database, label: "CRM & Helpdesk Integrations" },
               { icon: HelpCircle, label: "In-App Support Widget Integration" }
             ].map((item, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center">
+              <div key={idx} className="bg-white p-6 rounded-xl shadow flex flex-col items-center text-center transition duration-300 hover:scale-105 hover:shadow-lg">
                 <item.icon className="w-8 h-8 mb-4 text-purple-600" />
                 <p>{item.label}</p>
               </div>
@@ -90,7 +90,7 @@ export default function LandingPage() {
           key={idx}
           className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm"
         >*/
-          <div key={idx} className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm">
+          <div key={idx} className="bg-white/10 p-6 rounded-xl shadow text-left backdrop-blur-sm transition duration-300 hover:scale-105 hover:shadow-lg">
 
           <p>{item}</p>
         </div>
@@ -134,7 +134,7 @@ export default function LandingPage() {
             ].map((plan, idx) => (
               <div
                 key={idx}
-                className={`p-6 rounded-xl shadow text-left border ${plan.highlight ? "border-purple-500 bg-purple-50" : "bg-white"}`}
+                className={`p-6 rounded-xl shadow text-left border transition duration-300 hover:scale-105 hover:shadow-lg ${plan.highlight ? "border-purple-500 bg-purple-50" : "bg-white"}`}
               >
                 <h3 className="text-2xl font-bold mb-3">{plan.name}</h3>
                 <p><strong>Coverage:</strong> {plan.coverage}</p>
@@ -142,7 +142,7 @@ export default function LandingPage() {
                 <p><strong>Channels:</strong> {plan.channels}</p>
                 <p><strong>Level:</strong> {plan.level}</p>
                 <p className="text-xl font-semibold mt-2">{plan.price}</p>
-                <button className="mt-4 w-full bg-purple-600 text-white py-2 rounded-xl hover:bg-purple-700 transition">
+                <button className="mt-4 w-full bg-purple-600 text-white py-2 rounded-xl hover:bg-purple-700 hover:scale-105 hover:shadow-lg transition duration-300">
                   Start Now
                 </button>
               </div>
