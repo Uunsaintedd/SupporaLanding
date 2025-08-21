@@ -155,9 +155,41 @@ export default function LandingPage() {
       <section id="contact" className="py-20 bg-purple-600 text-white text-center">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-6">Let’s Talk</h2>
-          <p>Email: <a href="mailto:contact@suppora.com" className="underline">contact@suppora.com</a></p>
-          <p className="mt-2">LinkedIn: <a href="https://linkedin.com/company/suppora" className="underline">linkedin.com/company/suppora</a></p>
-          <p className="mt-6">Or <a href="#" className="underline">fill out our contact form</a></p>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            className="space-y-4 max-w-md mx-auto"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              className="w-full p-2 rounded text-gray-900"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="w-full p-2 rounded text-gray-900"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Message"
+              className="w-full p-2 rounded text-gray-900"
+              rows="4"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 transition"
+            >
+              Send
+            </button>
+          </form>
         </div>
       </section>
     </main>
