@@ -1,25 +1,60 @@
 import React from "react";
-import { MessageCircle, Activity, PhoneCall, MonitorSmartphone, Database, ShieldCheck, HelpCircle } from "lucide-react";
+import {
+  MessageCircle,
+  Activity,
+  PhoneCall,
+  MonitorSmartphone,
+  Database,
+  ShieldCheck,
+  HelpCircle,
+} from "lucide-react";
+
+const PersonAtComputer = ({ className }) => (
+  <svg
+    viewBox="0 0 80 80"
+    className={className}
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="4"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect x="8" y="12" width="64" height="44" rx="4" />
+    <circle cx="40" cy="32" r="8" />
+    <path d="M28 48c2-6 20-6 24 0" />
+    <rect x="28" y="60" width="24" height="4" fill="currentColor" stroke="none" />
+    <rect x="20" y="64" width="40" height="4" fill="currentColor" stroke="none" />
+  </svg>
+);
 
 export default function LandingPage() {
   return (
     <main className="bg-white text-gray-900 font-sans">
       {/* Hero Section */}
-      <section className="relative text-white pt-[180px] pb-[120px] text-center">
+      <section className="relative text-white pt-32 pb-24 text-center overflow-hidden">
   {/* Разделённый фон */}
   <div className="absolute inset-0">
     <div className="h-[35%] bg-white" />
     <div className="h-[65%] bg-purple-600" />
   </div>
 
-  <div className="relative container mx-auto px-6 flex flex-col items-center">
-    {/* ЛОГОТИП */}
-    <div className="-mt-[180px] mb-6">
-      <img src="/logo.png" alt="Suppora Logo" className="w-[180px] h-[180px]" />
-    </div>
+  {/* Декоративный паттерн */}
+  <div className="absolute inset-0 pointer-events-none">
+    <svg
+      className="w-full h-full opacity-10 text-white"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <pattern id="hero-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="2" fill="currentColor" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hero-pattern)" />
+    </svg>
+  </div>
 
-    {/* ТЕКСТ */}
-    <div className="mt-10">
+  <div className="relative container mx-auto px-6 flex flex-col items-center md:flex-row md:justify-center md:space-x-10">
+    <div className="max-w-2xl text-center md:text-left">
       <h1 className="text-5xl font-bold mb-4">Scalable Human-Centered Tech Support</h1>
       <p className="text-lg mb-6">Remote-first L1 & L2 support for startups, SaaS & fintech companies</p>
       <a
@@ -28,6 +63,9 @@ export default function LandingPage() {
       >
         Let’s Talk
       </a>
+    </div>
+    <div className="mt-10 md:mt-0">
+      <PersonAtComputer className="w-32 h-32 text-white" />
     </div>
   </div>
 </section>
