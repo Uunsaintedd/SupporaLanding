@@ -5,32 +5,32 @@ export default function LandingPage() {
   return (
     <main className="bg-white text-gray-900 font-sans">
       {/* Hero Section */}
-      <section className="relative text-white pt-[180px] pb-[120px] text-center">
-  {/* Разделённый фон */}
-  <div className="absolute inset-0">
-    <div className="h-[35%] bg-white" />
-    <div className="h-[65%] bg-purple-600" />
-  </div>
+      <section className="relative text-white pt-[180px] pb-[120px]">
+        {/* Разделённый фон */}
+        <div className="absolute inset-0">
+          <div className="h-[35%] bg-white" />
+          <div className="h-[65%] bg-purple-600" />
+        </div>
 
-  <div className="relative container mx-auto px-6 flex flex-col items-center">
-    {/* ЛОГОТИП */}
-    <div className="-mt-[180px] mb-6">
-      <img src="/logo.png" alt="Suppora Logo" className="w-[180px] h-[180px]" />
-    </div>
+        <div className="relative container mx-auto px-6 flex flex-col items-center md:items-start">
+          <img
+            src="/logo.svg"
+            alt="Suppora Logo"
+            className="w-20 h-20 mb-6 mx-auto md:mx-0"
+          />
 
-    {/* ТЕКСТ */}
-    <div className="mt-10">
-      <h1 className="text-5xl font-bold mb-4">Scalable Human-Centered Tech Support</h1>
-      <p className="text-lg mb-6">Remote-first L1 & L2 support for startups, SaaS & fintech companies</p>
-      <a
-        href="#contact"
-        className="inline-block bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 transition"
-      >
-        Let’s Talk
-      </a>
-    </div>
-  </div>
-</section>
+          <div className="text-center md:text-left">
+            <h1 className="text-5xl font-bold mb-4">Scalable Human‑Centered Support</h1>
+            <p className="text-lg mb-6">Remote-first L1 & L2 support for startups, SaaS & fintech</p>
+            <a
+              href="#contact"
+              className="mx-auto block bg-white text-purple-700 font-semibold py-3 px-6 rounded-xl hover:bg-purple-100 transition"
+            >
+              Let’s Talk
+            </a>
+          </div>
+        </div>
+      </section>
 
 
 
