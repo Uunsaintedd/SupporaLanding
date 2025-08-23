@@ -1,5 +1,6 @@
 import React from "react";
 import { MessageCircle, Activity, PhoneCall, MonitorSmartphone, Database, ShieldCheck, HelpCircle } from "lucide-react";
+import { Heart, Cpu, Clock, Repeat } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -39,16 +40,37 @@ export default function LandingPage() {
 
 
       {/* Who We Are */}
-      <section className="py-20 bg-gray-50 text-center">
-  <div className="container mx-auto px-6 max-w-3xl">
-    <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
-    <p className="text-lg leading-relaxed">
-      SUPPORA is a modern remote-first support agency delivering L1 and L2 technical support.
-      We combine tech expertise with a human-first attitude to help your users feel heard,
-      understood, and supported — 24/7.
-    </p>
-  </div>
-</section>
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 items-center gap-8">
+          <div>
+            <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
+            <p className="text-lg leading-relaxed">
+              SUPPORA is a modern remote-first support agency delivering L1 and L2 technical support.
+              We combine tech expertise with a human-first attitude to help your users feel heard,
+              understood, and supported — 24/7.
+            </p>
+            <ul className="mt-6 space-y-4 text-left">
+              <li className="flex items-start gap-3">
+                <Heart className="w-5 h-5 text-purple-600 mt-1" />
+                <span>Human-first attitude</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Cpu className="w-5 h-5 text-purple-600 mt-1" />
+                <span>Tech expertise</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Clock className="w-5 h-5 text-purple-600 mt-1" />
+                <span>24/7 availability</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Repeat className="w-5 h-5 text-purple-600 mt-1" />
+                <span>Continuous improvement</span>
+              </li>
+            </ul>
+          </div>
+          <div className="bg-gray-200 h-64 md:h-72 flex items-center justify-center rounded-lg">Team</div>
+        </div>
+      </section>
 
 
       {/* What We Do */}
