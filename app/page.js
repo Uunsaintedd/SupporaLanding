@@ -39,16 +39,24 @@ export default function LandingPage() {
 
 
       {/* Who We Are */}
-      <section className="py-20 bg-gray-50 text-center">
-  <div className="container mx-auto px-6 max-w-3xl">
-    <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
-    <p className="text-lg leading-relaxed">
-      SUPPORA is a modern remote-first support agency delivering L1 and L2 technical support.
-      We combine tech expertise with a human-first attitude to help your users feel heard,
-      understood, and supported — 24/7.
-    </p>
-  </div>
-</section>
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
+            <ul className="space-y-4 text-lg list-disc list-inside">
+              <li>Human-first attitude</li>
+              <li>Tech expertise</li>
+              <li>Fast onboarding (3–5 days)</li>
+              <li>Scalable teams</li>
+              <li>Flexible collaboration</li>
+              <li>24/7 availability</li>
+            </ul>
+          </div>
+          <div className="w-full h-72 bg-gray-200 rounded-xl flex items-center justify-center">
+            Team
+          </div>
+        </div>
+      </section>
 
 
       {/* What We Do */}
