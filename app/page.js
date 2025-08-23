@@ -1,5 +1,17 @@
 import React from "react";
-import { MessageCircle, Activity, PhoneCall, MonitorSmartphone, Database, ShieldCheck, HelpCircle } from "lucide-react";
+import {
+  MessageCircle,
+  Activity,
+  PhoneCall,
+  MonitorSmartphone,
+  Database,
+  ShieldCheck,
+  HelpCircle,
+  Smile,
+  Cpu,
+  Clock,
+  Repeat
+} from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -39,16 +51,43 @@ export default function LandingPage() {
 
 
       {/* Who We Are */}
-      <section className="py-20 bg-gray-50 text-center">
-  <div className="container mx-auto px-6 max-w-3xl">
-    <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
-    <p className="text-lg leading-relaxed">
-      SUPPORA is a modern remote-first support agency delivering L1 and L2 technical support.
-      We combine tech expertise with a human-first attitude to help your users feel heard,
-      understood, and supported — 24/7.
-    </p>
-  </div>
-</section>
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 max-w-5xl grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+          <div>
+            <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
+            <p className="text-lg leading-relaxed mb-6">
+              SUPPORA is a modern remote-first support agency delivering L1 and L2 technical support.
+              We combine tech expertise with a human-first attitude to help your users feel heard,
+              understood, and supported — 24/7.
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-center gap-3">
+                <Smile className="w-6 h-6 text-purple-600" />
+                <span>Human-first attitude</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Cpu className="w-6 h-6 text-purple-600" />
+                <span>Tech expertise</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Clock className="w-6 h-6 text-purple-600" />
+                <span>24/7 availability</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Repeat className="w-6 h-6 text-purple-600" />
+                <span>Continuous improvement</span>
+              </li>
+            </ul>
+          </div>
+          <div className="flex justify-center">
+            <img
+              src="/team-illustration.svg"
+              alt="Illustration of support team"
+              className="w-full h-auto max-w-md"
+            />
+          </div>
+        </div>
+      </section>
 
 
       {/* What We Do */}
