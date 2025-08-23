@@ -1,36 +1,41 @@
 import React from "react";
-import { MessageCircle, Activity, PhoneCall, MonitorSmartphone, Database, ShieldCheck, HelpCircle } from "lucide-react";
+import { MessageCircle, Activity, PhoneCall, MonitorSmartphone, Database, HelpCircle } from "lucide-react";
 
 export default function LandingPage() {
   return (
     <main className="bg-white text-gray-900 font-sans">
       {/* Hero Section */}
-      <section className="relative text-white pt-[180px] pb-[120px] text-center">
-  {/* Разделённый фон */}
-  <div className="absolute inset-0">
-    <div className="h-[35%] bg-white" />
-    <div className="h-[65%] bg-purple-600" />
-  </div>
-
-  <div className="relative container mx-auto px-6 flex flex-col items-center">
-    {/* ЛОГОТИП */}
-    <div className="-mt-[180px] mb-6">
-      <img src="/logo.png" alt="Suppora Logo" className="w-[180px] h-[180px]" />
-    </div>
-
-    {/* ТЕКСТ */}
-    <div className="mt-10">
-      <h1 className="text-5xl font-bold mb-4">Scalable Human-Centered Tech Support</h1>
-      <p className="text-lg mb-6">Remote-first L1 & L2 support for startups, SaaS & fintech companies</p>
-      <a
-        href="#contact"
-        className="inline-block bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 transition"
-      >
-        Let’s Talk
-      </a>
-    </div>
-  </div>
-</section>
+      <section className="bg-gradient-to-b from-purple-600 to-purple-700 text-white py-24">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <img
+              src="/logo.svg"
+              alt="Suppora Logo"
+              className="w-32 h-32 mb-6"
+            />
+            <h1 className="text-5xl font-bold mb-4">
+              Scalable Human-Centered Tech Support
+            </h1>
+            <p className="text-lg mb-6">
+              Remote-first L1 & L2 support for startups, SaaS & fintech
+              companies
+            </p>
+            <a
+              href="#contact"
+              className="bg-white text-purple-700 font-semibold py-2 px-6 rounded-xl hover:bg-purple-100 transition"
+            >
+              Let’s Talk
+            </a>
+          </div>
+          <div className="hidden md:block md:ml-10">
+            <img
+              src="/illustration.svg"
+              alt="Support illustration"
+              className="w-full max-w-sm"
+            />
+          </div>
+        </div>
+      </section>
 
 
 
