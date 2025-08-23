@@ -5,6 +5,7 @@ import {
   PhoneCall,
   MonitorSmartphone,
   Database,
+  ShieldCheck,
   HelpCircle,
   Smile,
   Cpu,
